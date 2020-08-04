@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game.gd" type="Script" id=1]
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 477.873
+margin_top = 328.371
+margin_right = 548.873
+margin_bottom = 348.371
+text = "Click me!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Upgrade_Button" type="Button" parent="."]
+margin_left = 241.612
+margin_top = 342.144
+margin_right = 312.612
+margin_bottom = 362.144
+text = "Upgrade"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 362.336
+margin_top = 387.764
+margin_right = 449.336
+margin_bottom = 437.764
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score_Per_Tick" type="Label" parent="VBoxContainer"]
+margin_right = 87.0
+margin_bottom = 14.0
+text = "Tick_Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Upgrade_Cost" type="Label" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 87.0
+margin_bottom = 32.0
+text = "Upgrade_Cost"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 87.0
+margin_bottom = 50.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 35.0
+margin_bottom = 14.0
+text = "Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score_Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 39.0
+margin_right = 39.0
+margin_bottom = 14.0
+
+[node name="Achievement_Statistics_Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Achievement_Statistics"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Upgrade_Button" to="." method="_on_Upgrade_Button_pressed"]
